@@ -242,6 +242,7 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <id>install-packages</id>
                         <phase>pre-integration-test</phase>
                         <goals>
                             <goal>install</goal>
