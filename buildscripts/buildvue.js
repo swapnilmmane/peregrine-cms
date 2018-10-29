@@ -1,12 +1,14 @@
+const VuePlugin = require('rollup-plugin-vue')
+
 const process   = require('process')
 const fs        = require('fs-extra')
 
 const rollup    = require( 'rollup' )
 const path      = require('path')
-const vue       = require('rollup-plugin-vue')
 const buble     = require('rollup-plugin-buble')
 const camelcase = require('camelcase')
 
+console.log(VuePlugin.default())
 console.log('=== building vue files ========================================')
 
 var felibName = ''
@@ -50,9 +52,9 @@ function compileComponent(file){
 
   // compile the Vue component and give us a .js and .css
   rollup.rollup({
-    entry: `${basePath}${file}`,
+    input: `${basePath}${file}`,
     plugins: [
-      vue({
+      VuePlugin.default({
         compileTemplate: true,
         css: `${distBasePath}/css/${nameCamelCase}.css`
       }),
@@ -63,7 +65,8 @@ function compileComponent(file){
     bundle.write({
       format: 'iife',
       moduleName: moduleName,
-      dest: `${distBasePath}/js/${nameCamelCase}.js`,
+      name: moduleName,
+      file: `${distBasePath}/js/${nameCamelCase}.js`,
       globals: {
         tools: 'tools',
           log: 'log'
