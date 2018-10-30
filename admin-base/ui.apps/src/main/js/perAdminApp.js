@@ -189,6 +189,24 @@ function walkTreeAndLoad(node) {
     })
 }
 
+
+/**
+ * method to recursively force an update on all view components
+ *
+ * @param vm
+ *
+ * @private
+ */
+function recursiveForceUpdate(vm) {
+    if(vm.$children) {
+        for(let i = 0; i < vm.$children.length; i++) {
+            const child = vm.$children[i]
+            recursiveForceUpdate(child)
+            child.$forceUpdate()
+        }
+    }
+}
+
 /**
  * initializes the vuejs app
  *
@@ -207,6 +225,14 @@ function initPeregrineApp() {
         el: '#peregrine-adminapp',
         data: view
     });
+
+    // hack to make editor sync with instance at all times
+    app.$watch('pageView', function (oldVal, newVal) {
+        if(document.getElementById('editview') && document.getElementById('editview').contentWindow.$peregrineApp) {
+            recursiveForceUpdate(document.getElementById('editview').contentWindow.$peregrineApp.getPerVueApp().$root)
+        }
+    }, { deep: true});
+    // end of hack
 
     const state = sessionStorage.getItem('perAdminApp.state')
     const admin = sessionStorage.getItem('perAdminApp.admin')
