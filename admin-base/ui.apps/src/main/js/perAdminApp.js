@@ -227,11 +227,11 @@ function initPeregrineApp() {
     });
 
     // hack to make editor sync with instance at all times
-    app.$watch('pageView', function (oldVal, newVal) {
-        if(document.getElementById('editview') && document.getElementById('editview').contentWindow.$peregrineApp) {
-            recursiveForceUpdate(document.getElementById('editview').contentWindow.$peregrineApp.getPerVueApp().$root)
-        }
-    }, { deep: true});
+    // app.$watch('pageView', function (oldVal, newVal) {
+    //     if(document.getElementById('editview') && document.getElementById('editview').contentWindow.$peregrineApp) {
+    //         recursiveForceUpdate(document.getElementById('editview').contentWindow.$peregrineApp.getPerVueApp().$root)
+    //     }
+    // }, { deep: true});
     // end of hack
 
     const state = sessionStorage.getItem('perAdminApp.state')
