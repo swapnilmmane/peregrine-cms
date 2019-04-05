@@ -12,9 +12,9 @@
   to you under the Apache License, Version 2.0 (the
   "License"); you may not use this file except in compliance
   with the License.  You may obtain a copy of the License at
-  
+
   http://www.apache.org/licenses/LICENSE-2.0
-  
+
   Unless required by applicable law or agreed to in writing,
   software distributed under the License is distributed on an
   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -30,7 +30,7 @@
     <jcr:content
             jcr:primaryType="per:PageContent"
             sling:resourceType="admin/components/toolingpage"
-            jcr:title="First Start"
+            jcr:title="Simple Site"
             jcr:description="admin base Content Root"
             siteCSS="[/etc/felibs/admin/dependencies/material-design-icons/material-icons.css,/etc/felibs/materialize/materialize.css]"
             siteJS="[/etc/felibs/admin/dependencies/jquery/jquery.js,/etc/felibs/admin/dependencies/materialize-css/js/materialize.min.js]"
@@ -50,20 +50,22 @@
                 >
 
                     <text jcr:primaryType="nt:unstructured"
-                           sling:resourceType="pagerender/vue/components/base"
-                           text="&lt;h3&gt;Hey, Welcome&lt;/h3&gt;Seems you just started peregrine-cms! Would you like me to help you get set up?">
+                          sling:resourceType="pagerender/vue/components/base"
+                          text="&lt;h3&gt;Where would you like to publish your content?&lt;/h3&gt;.">
                         <experiences jcr:primaryType="nt:unstructured"/>
                     </text>
 
-                    <yes jcr:primaryType="nt:unstructured"
-                            sling:resourceType="admin/components/action" target="/content/admin/guides/firststart/type" title="yes, please walk me through this"
-                            command="selectPath"
-                            icon="phone_android" alt="yes" classes="waves-effect waves-light btn btn-raised"/>
+                    <static jcr:primaryType="nt:unstructured"
+                          sling:resourceType="admin/components/iconaction" action="/content/admin/guides/firststart/simple" jcr:title="File System"
+                          jcr:description="I want to publish static files to the file system"/>
 
-                    <no jcr:primaryType="nt:unstructured"
-                         sling:resourceType="admin/components/action" target="/content/admin" title="no, I know what I am doing"
-                        command="selectPath"
-                         icon="phone_android" alt="no" classes="waves-effect waves-light btn btn-flat"/>
+                    <github jcr:primaryType="nt:unstructured"
+                          sling:resourceType="admin/components/iconaction" action="/content/admin/guides/firststart/simple" jcr:title="Github Pages"
+                          jcr:description="Push my content to github for me, please"/>
+
+                    <s3 jcr:primaryType="nt:unstructured"
+                          sling:resourceType="admin/components/iconaction" action="/content/admin/guides/firststart/simple" jcr:title="Amazon S3"
+                          jcr:description="Just maintain an S3 bucket for me with the static site on it"/>
                 </col1>
             </row>
         </content>
