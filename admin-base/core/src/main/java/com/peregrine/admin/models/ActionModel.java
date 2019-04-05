@@ -78,6 +78,10 @@ import static com.peregrine.commons.util.PerConstants.JSON;
     "stateFromDefault": {
       "type": "string",
       "source": "inject"
+    },
+    "classes": {
+      "type": "string",
+      "source": "inject"
     }
   },
   "propertyNames": [
@@ -89,7 +93,8 @@ import static com.peregrine.commons.util.PerConstants.JSON;
     "type",
     "icon",
     "stateFrom",
-    "stateFromDefault"
+    "stateFromDefault",
+    "classes"
   ],
   "modelName": "Action",
   "package": "com.peregrine.admin.models",
@@ -143,6 +148,9 @@ public class ActionModel extends AbstractComponent {
     @Inject
     private String stateFromDefault;
 
+    /* {"type":"string","source":"inject"} */
+    @Inject
+    private String classes;
 
     //GEN]
 
@@ -182,6 +190,10 @@ public class ActionModel extends AbstractComponent {
     return stateFromDefault;
     }
 
+    /* {"type":"string","source":"inject"} */
+    public String getClasses() {
+        return classes;
+    }
 
     //GEN]
 

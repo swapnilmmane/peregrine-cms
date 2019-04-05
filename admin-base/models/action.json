@@ -38,6 +38,10 @@
 				"stateFromDefault": {
 					"type": "string",
 					"source": "inject"
+				},
+				"classes": {
+					"type": "string",
+					"source": "inject"
 				}
 			}
 		}
