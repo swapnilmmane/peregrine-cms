@@ -24,11 +24,11 @@
   -->
 <template>
     <div class="editor-panel" ref="editorPanel" v-bind:data-per-path="model.path">
-        <div class="editor-panel-content" v-if="schema !== undefined && dataModel !== undefined">
+        <div class="editor-panel-content">
             <span class="panel-title">Editor</span>
             <span v-if="title"> - {{title}}</span>
             <div v-if="!hasSchema">this component does not have a dialog defined</div>
-            <vue-form-generator v-bind:schema="schema" v-bind:model="dataModel" v-bind:options="formOptions">
+            <vue-form-generator v-if="schema !== undefined && dataModel !== undefined" v-bind:schema="schema" v-bind:model="dataModel" v-bind:options="formOptions">
             </vue-form-generator>
         </div>
         <div class="editor-panel-buttons">

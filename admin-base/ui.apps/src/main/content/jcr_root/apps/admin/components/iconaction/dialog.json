@@ -1,0 +1,25 @@
+{
+  "fields": [
+    {
+      "type": "input",
+      "inputType": "text",
+      "placeholder": "title",
+      "label": "Title",
+      "model": "jcr:title"
+    },
+    {
+      "type": "texteditor",
+      "rows": 10,
+      "placeholder": "text",
+      "label": "Description",
+      "model": "jcr:description"
+    },
+    {
+      "type": "input",
+      "inputType": "text",
+      "placeholder": "action",
+      "label": "Action",
+      "model": "action"
+    }
+  ]
+}

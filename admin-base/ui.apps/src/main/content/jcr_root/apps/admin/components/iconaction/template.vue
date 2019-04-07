@@ -49,6 +49,7 @@
         props: ['model'],
         methods: {
             internal(action) {
+                if(!action) return true;
                 return !action.startsWith('http')
             }
         }
