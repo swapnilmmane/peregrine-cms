@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <div class="pathfield">
+    <div class="pathfield" v-bind:data-per-path="model.path">
         <template v-for="item in pathSegments">
             /&nbsp;<admin-components-action
                 v-bind:model="{

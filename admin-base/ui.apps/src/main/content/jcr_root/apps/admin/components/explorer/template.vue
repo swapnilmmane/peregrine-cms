@@ -25,6 +25,7 @@
 <template>
 
 <div class="explorer"
+    v-bind:data-per-path="model.path"
     v-on:dragover.prevent  ="onDragOverExplorer"
     v-on:dragenter.prevent ="onDragEnterExplorer"
     v-on:dragleave.prevent ="onDragLeaveExplorer"
@@ -229,16 +230,19 @@
         },
         methods: {
             isAssets(path){
-                return path.startsWith('/content/assets')
+                return path.startsWith('/content/assets/')
             },
             isSites(path){
-                return path.startsWith('/content/sites')
+                return path.startsWith('/content/sites/')
             },
             isObjects(path){
-                return path.startsWith('/content/objects')
+                return path.startsWith('/content/objects/')
             },
             isTemplates(path){
-                return path.startsWith('/content/templates')
+                return path.startsWith('/content/templates/')
+            },
+            isAdmin(path){
+                return path.startsWith('/content/admin/')
             },
             selectParent(me, target) {
                 var dataFrom = !me ? this.model.dataFrom : me.model.dataFrom
@@ -518,6 +522,8 @@
                     const node = $perAdminApp.findNodeFromPath($perAdminApp.getView().admin.nodes, target)
                     me.selectedObject = path
                     $perAdminApp.stateAction('editObject', { selected: node.path, path: me.model.dataFrom })
+                } if(path.startsWith('/content/admin')) {
+                    $perAdminApp.stateAction('editAdminPage', target )
                 } else {
                     $perAdminApp.stateAction('editPage', target )
                 }

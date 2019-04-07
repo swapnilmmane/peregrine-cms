@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-<div class="row">
+<div class="row" v-bind:data-per-path="model.path">
     <admin-components-iconaction v-for="(action, key) in fromSource" v-bind:key="key" v-bind:model="action"></admin-components-iconaction>
 </div>
 </template>

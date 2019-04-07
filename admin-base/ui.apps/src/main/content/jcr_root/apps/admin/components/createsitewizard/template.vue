@@ -27,6 +27,7 @@
     <form-wizard
       v-bind:title="'create a site'"
       v-bind:subtitle="''" @on-complete="onComplete"
+      v-bind:data-per-path="model.path"
       error-color="#d32f2f"
       color="#546e7a">
         <tab-content title="select theme" :before-change="leaveTabOne">

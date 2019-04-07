@@ -23,7 +23,8 @@
   #L%
   -->
 <template>
-    <div :class="`peregrine-workspace ${state.rightPanelVisible ? 'right-panel-visible' : ''}`">
+    <div :class="`peregrine-workspace ${state.rightPanelVisible ? 'right-panel-visible' : ''}`"
+         v-bind:data-per-path="model.path">
         <component
           v-bind:is    = "getChildByPath('contentview').component"
           v-bind:model = "getChildByPath('contentview')">

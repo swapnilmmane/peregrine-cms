@@ -74,6 +74,7 @@ import replicate from './stateActions/replicate'
 import moveTemplate from './stateActions/moveTemplate'
 import renameObject from './stateActions/renameObject'
 import moveObject from './stateActions/moveObject'
+import editAdminPage from './stateActions/editAdminPage'
 
 actions['selectToolsNodesPath'] = selectToolsNodesPath
 actions['createSiteWizard'] = createSiteWizard
@@ -122,6 +123,7 @@ actions['savePageProperties'] = savePageProperties
 actions['replicate'] = replicate
 actions['moveObject'] = moveObject
 actions['moveTemplate'] = moveTemplate
+actions['editAdminPage'] = editAdminPage
 
 function noopAction(me, target) {
     log.error('state action noop with target:', target)

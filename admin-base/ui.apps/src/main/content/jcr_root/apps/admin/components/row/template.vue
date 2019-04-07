@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-<div class="rowfullheight row" style="margin-bottom: 0px">
+<div class="rowfullheight row" style="margin-bottom: 0px" v-bind:data-per-path="model.path">
     <template v-for="child in model.children">
         <component v-bind:is="child.component" v-bind:model="child"></component>
     </template>

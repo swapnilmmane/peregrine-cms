@@ -25,7 +25,8 @@
 <template>
     <div
         v-bind:class  ="`peregrine-content-view ${viewModeClass}`"
-        v-on:mouseout = "leftOverlayArea">
+        v-on:mouseout = "leftOverlayArea"
+        v-bind:data-per-path="model.path">
         <div
             id             = "editviewoverlay"
             v-on:click     = "onClickOverlay"

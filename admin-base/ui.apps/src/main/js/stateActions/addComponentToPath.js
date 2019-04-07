@@ -40,7 +40,14 @@ export default function(me, target) {
     // resolve path to component name
     let componentName = componentPath ? componentPath.split('/').slice(2).join('-') : target.data.component
     log.fine('load',componentName, 'into edit view (make sure it is available')
-    document.getElementById('editview').contentWindow.$peregrineApp.loadComponent(componentName)
+
+    // work either with manipulating admin or a regular site
+    const contentWindow = document.getElementById('editview').contentWindow
+    if(contentWindow.$peregrineApp) {
+        contentWindow.$peregrineApp.loadComponent(componentName)
+    } else if(contentWindow.$perAdminApp) {
+        contentWindow.$perAdminApp.loadComponent(componentName)
+    }
 
     let targetNode = null
     let targetNodeUpdate = null

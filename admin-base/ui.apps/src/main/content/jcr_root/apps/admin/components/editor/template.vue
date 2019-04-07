@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <div class="editor-panel" ref="editorPanel">
+    <div class="editor-panel" ref="editorPanel" v-bind:data-per-path="model.path">
         <div class="editor-panel-content" v-if="schema !== undefined && dataModel !== undefined">
             <span class="panel-title">Editor</span>
             <span v-if="title"> - {{title}}</span>

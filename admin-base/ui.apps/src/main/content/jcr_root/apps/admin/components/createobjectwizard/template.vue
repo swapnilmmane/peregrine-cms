@@ -24,7 +24,8 @@
   -->
 <template>
 <div class="container">
-    <form-wizard v-bind:title="'create an object'" v-bind:subtitle="''" @on-complete="onComplete" color="#37474f">
+    <form-wizard v-bind:title="'create an object'" v-bind:subtitle="''" @on-complete="onComplete" color="#37474f"
+                 v-bind:data-per-path="model.path">
         <tab-content title="select template" :before-change="leaveTabOne">
             <ul class="collection">
                 <li class="collection-item"

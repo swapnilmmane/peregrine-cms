@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <div class="explorer-preview-content preview-template">
+    <div class="explorer-preview-content preview-template" v-bind:data-per-path="model.path">
         <template v-if="currentObject">
             <ul class="explorer-preview-nav">
                 <template v-if="allowOperations">

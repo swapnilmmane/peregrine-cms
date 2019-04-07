@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-<div class="col s12 m6 l4 icon-action">
+<div class="col s12 m6 l4 icon-action" v-bind:data-per-path="model.path">
     <div class="card blue-grey darken-3">
         <div class="card-content white-text">
             <span class="card-title">{{$exp(model, 'title')}}</span>

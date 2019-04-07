@@ -23,7 +23,8 @@
   #L%
   -->
 <template>
-    <div ref="wrapper" v-bind:class="['sourceimagewizard', 'container', {'initial-search':  !state.results}]">
+    <div ref="wrapper" v-bind:class="['sourceimagewizard', 'container', {'initial-search':  !state.results}]"
+         v-bind:data-per-path="model.path">
         <div class="search-bar">
             <button v-if="viewing" v-on:click.prevent.stop="deSelect()" class="back-to-grid btn-flat">
                 <i class="material-icons">grid_on</i><span>back to results</span>

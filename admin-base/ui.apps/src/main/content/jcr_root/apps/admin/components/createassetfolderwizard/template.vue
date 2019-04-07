@@ -25,7 +25,8 @@
 <template>
 <div class="container">
     <form-wizard v-bind:title="'create a folder'" 
-                 v-bind:subtitle="''" 
+                 v-bind:subtitle="''"
+                 v-bind:data-per-path="model.path"
                  @on-complete="onComplete" 
                  color="#37474f">
         <tab-content title="choose folder name" 

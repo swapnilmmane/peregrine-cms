@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-<div>
+<div v-bind:data-per-path="model.path">
     <div class="row">
         <div class="col s12">
             <input v-model="querystring">

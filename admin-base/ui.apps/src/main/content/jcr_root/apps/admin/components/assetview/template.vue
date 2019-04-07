@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <div class="explorer-preview-content preview-asset">
+    <div class="explorer-preview-content preview-asset" v-bind:data-per-path="model.path">
         <template v-if="currentObject && currentObject.hasOwnProperty('show')">
             <ul class="explorer-preview-nav">
                 <li>

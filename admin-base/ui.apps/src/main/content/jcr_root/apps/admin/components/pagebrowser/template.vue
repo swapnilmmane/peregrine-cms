@@ -23,7 +23,8 @@
   #L%
   -->
 <template>
-    <div id="pageBrowserModal" class="pathbrowser pagebrowser modal default modal-fixed-footer">
+    <div id="pageBrowserModal" class="pathbrowser pagebrowser modal default modal-fixed-footer"
+         v-bind:data-per-path="model.path">
         <ul ref="pbtabs" class="pathbrowser-tabs">
             <li class="tab">
                 <a href="#" :class="tab === 'browse' ? 'active' : ''" v-on:click="select('browse')">

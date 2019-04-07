@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <span v-if="extensions">
+    <span v-if="extensions" v-bind:data-per-path="model.path">
         <component v-for="(extension, key) in extensions" v-bind:key="key" v-bind:is="extension" v-bind:model="model"></component>
     </span>
 </template>

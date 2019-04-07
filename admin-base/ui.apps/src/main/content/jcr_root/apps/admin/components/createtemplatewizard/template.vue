@@ -26,7 +26,8 @@
 <div class="container">
     <form-wizard 
       v-bind:title="'create a template'" 
-      v-bind:subtitle="''" @on-complete="onComplete" 
+      v-bind:subtitle="''" @on-complete="onComplete"
+      v-bind:data-per-path="model.path"
       error-color="#d32f2f"
       color="#546e7a">
         <tab-content title="select component" :before-change="leaveTabOne">

@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <div>
+    <div v-bind:data-per-path="model.path">
         <p>components</p>
         <div class="card blue-grey darken-1" draggable="true" v-bind:ondragstart="onDragStart">
             <div class="card-content white-text">

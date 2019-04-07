@@ -1,5 +1,5 @@
 <template>
-	<div :class="explorerPreviewClasses">
+	<div :class="explorerPreviewClasses" v-bind:data-per-path="model.path">
 	  <button 
 	    type="button" 
 	    class="toggle-fullscreen waves-effect waves-light"  

@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <div class="tooling-page">
+    <div class="tooling-page" v-bind:data-per-path="model.path">
         <template v-for="child in model.children">
             <component v-bind:is="child.component" v-bind:model="child"></component>
         </template>

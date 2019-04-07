@@ -23,7 +23,7 @@
   #L%
   -->
 <template>
-    <div class="component-explorer">
+    <div class="component-explorer" v-bind:data-per-path="model.path">
         <span class="panel-title">Components</span>
             <input type="text" v-model="state.filter" placeholder="Filter components" tabindex="1" autofocus/>
             <select class="browser-default" v-model="state.group">
@@ -98,6 +98,17 @@
                 var allowedComponents = ['/apps/' + componentPath[3]] // this.$root.$data.admin.currentPageConfig.allowedComponents
                 var list = this.$root.$data.admin.components.data
                 if (!list || !allowedComponents) return {}
+
+                // shortcut, just render all the admin component
+                if(this.$root.$data.pageView.path.startsWith('/content/admin/')) {
+                    return list.filter(component => {
+                        // just show admin components
+                        return component.path.startsWith('/apps/admin/');
+                    }).filter(component => {
+                        // filter the data from the text field
+                        return component.title.toLowerCase().indexOf(this.state.filter.toLowerCase()) >= 0;
+                    });
+                }
 
                 // Filter list to local components and with local filter
                 return list.filter(component => {

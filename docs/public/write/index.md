@@ -1,5 +1,18 @@
 # things we have to document so people can understand it 
 
+## change from htmtovue.js to incubate.js
+
+htmltovue is to specific and wont allow us in the future to change from vue to something else
+and is also not good right now since we support server side rendering (htl), vue and react. 
+
+Since we renamed the process to hatching a while ago we can stay with the general bird/egg 
+terminology here. 
+
+lay (create) - incubate (grow into something) - hatch (be born)
+
+now of course this terminology falls down a bit since we hatch the same component over and
+over again but let's think about those as clones from the same or almost identical dna (our model). 
+
 ## allowedObjects
 
 A folder under /content/objects can have a allowedObjects array propety. This array 
