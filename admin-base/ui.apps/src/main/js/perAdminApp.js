@@ -211,28 +211,30 @@ function initPeregrineApp() {
 
     // /start to set up that the admin page rendered when editing admin is coming from the page view of the editor
     if(window && window.parent && window.parent.$perAdminView && window.parent.$perAdminView.pageView) {
-        view.adminPage = window.parent.$perAdminView.pageView.page;
+
+        setTimeout(function() {
+            view.adminPage = window.parent.$perAdminView.pageView.page;
+        }, 1000)
+    } else {
+        const state = sessionStorage.getItem('perAdminApp.state')
+        const admin = sessionStorage.getItem('perAdminApp.admin')
+
+        if(state && admin) {
+            view.state = JSON.parse(state)
+            view.admin = JSON.parse(admin)
+
+            // make i18n and language selection survive session storage
+            view.state.language = lang
+            view.admin.i18n = i18nData
+        }
+
+        app.$watch('state', function(newVal, oldVal) {
+            sessionStorage.setItem('perAdminApp.state', JSON.stringify(newVal))
+        }, { deep: true })
+        app.$watch('admin', function(newVal, oldVal) {
+            sessionStorage.setItem('perAdminApp.admin', JSON.stringify(newVal))
+        }, { deep: true })
     }
-    // /end
-
-    const state = sessionStorage.getItem('perAdminApp.state')
-    const admin = sessionStorage.getItem('perAdminApp.admin')
-
-    if(state && admin) {
-        view.state = JSON.parse(state)
-        view.admin = JSON.parse(admin)
-
-        // make i18n and language selection survive session storage
-        view.state.language = lang
-        view.admin.i18n = i18nData
-    }
-
-    app.$watch('state', function(newVal, oldVal) {
-        sessionStorage.setItem('perAdminApp.state', JSON.stringify(newVal))
-    }, { deep: true })
-    app.$watch('admin', function(newVal, oldVal) {
-        sessionStorage.setItem('perAdminApp.admin', JSON.stringify(newVal))
-    }, { deep: true })
 }
 
 /**
