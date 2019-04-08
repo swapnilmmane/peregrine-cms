@@ -203,10 +203,17 @@ function initPeregrineApp() {
     const lang = view.state.language
     const i18nData = view.admin.i18n
 
+
     app = new Vue({
         el: '#peregrine-adminapp',
         data: view
     });
+
+    // /start to set up that the admin page rendered when editing admin is coming from the page view of the editor
+    if(window && window.parent && window.parent.$perAdminView && window.parent.$perAdminView.pageView) {
+        view.adminPage = window.parent.$perAdminView.pageView.page;
+    }
+    // /end
 
     const state = sessionStorage.getItem('perAdminApp.state')
     const admin = sessionStorage.getItem('perAdminApp.admin')
