@@ -1,0 +1,14 @@
+{
+  "id":"${project.groupId}:${project.artifactId}:slingosgifeature:pagerender-vue.ui.apps:${project.version}",
+  "id":"com.peregrine-cms:com.peregrine-cms.featuremodel.starter:slingosgifeature:1.0-SNAPSHOT",
+  "description":"JCR Package containing Page Render Vue JS content\n        and it service bundle.",
+  "bundles":[
+    {
+      "id":"com.peregrine-cms:pagerender-vue.core:1.0-SNAPSHOT",
+      "start-order":"20"
+    }
+  ],
+  "content-packages:ARTIFACTS|true":[
+    "com.peregrine-cms:pagerender-vue.ui.apps:zip:cp2fm-converted:1.0-SNAPSHOT"
+  ]
+}

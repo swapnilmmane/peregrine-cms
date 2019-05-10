@@ -1,0 +1,20 @@
+{
+  "id":"${project.groupId}:${project.artifactId}:slingosgifeature:admin.ui.apps-example:${project.version}",
+  "configurations":{
+    "com.peregrine.admin.replication.impl.RemoteS3SystemReplicationService~local":{
+      "awsRegionName":"PLEASE-FILL-IN",
+      "awsSecretKey":"PLEASE-FILL-IN",
+      "exportExtensions":[
+        "data.json=per:Page|per:Template",
+        "infinity.json=per:Object",
+        "html=per:Page|per:Template",
+        "*~raw=nt:file"
+      ],
+      "awsAccessKey":"PLEASE-FILL-IN",
+      "name":"remoteS3",
+      "mandatoryRenditions":"thumbnail.png",
+      "description":"Replication Service that replicates the resources to a remote Amazon S3 server using Sling rendering",
+      "awsBucketName":"PLEASE-FILL-IN"
+    }
+  }
+}

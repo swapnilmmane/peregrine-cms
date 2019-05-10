@@ -1,0 +1,28 @@
+{
+  "id":"${project.groupId}:${project.artifactId}:slingosgifeature:base.ui.apps-dev:${project.version}",
+  "configurations":{
+    "org.apache.sling.commons.log.LogManager.factory.config~peregrine":{
+      "org.apache.sling.commons.log.pattern":"{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}",
+      "org.apache.sling.commons.log.names":[
+        "com.peregrine"
+      ],
+      "org.apache.sling.commons.log.level":"trace",
+      "org.apache.sling.commons.log.file":"logs/peregrine.cms.log"
+    },
+    "com.peregrine.admin.replication.impl.RemoteS3SystemReplicationService~localDoNotIncludeInGit":{
+      "awsRegionName":"us-east-1",
+      "awsSecretKey":"ijUp7wFk/TTbmn+LZbmIYxXml18FylXqdpQ6fTvB",
+      "exportExtensions":[
+        "data.json=example/components/page|per:Template",
+        "infinity.json=per:Object",
+        "html=per:Page|per:Template",
+        "*~raw=nt:file"
+      ],
+      "awsAccessKey":"AKIAI7TWALTG6ZSZGLJQ",
+      "name":"remoteS3HW",
+      "mandatoryRenditions":"thumbnail.png",
+      "description":"DO NOT ADD TO GIT: Replication Service that replicates the resources to a remote Amazon S3 server using Sling rendering",
+      "awsBucketName":"peregrine-replicationtest"
+    }
+  }
+}

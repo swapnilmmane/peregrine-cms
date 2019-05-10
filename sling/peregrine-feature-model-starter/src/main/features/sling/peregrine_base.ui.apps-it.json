@@ -1,0 +1,23 @@
+{
+  "id":"${project.groupId}:${project.artifactId}:slingosgifeature:base.ui.apps-it:${project.version}",
+  "configurations":{
+    "com.peregrine.transform.operation.ThumbnailImageTransformation~it":{
+      "enabled":"true",
+      "defaultHeight":"75",
+      "defaultWidth":"75",
+      "transformationName":"vips:thumbnail"
+    },
+    "org.apache.sling.commons.log.LogManager.factory.config~peregrine":{
+      "org.apache.sling.commons.log.pattern":"{0,date,yyyy-MM-dd HH:mm:ss.SSS} {4} [{3}] {5}",
+      "org.apache.sling.commons.log.names":[
+        "com.peregrine"
+      ],
+      "org.apache.sling.commons.log.level":"trace",
+      "org.apache.sling.commons.log.file":"logs/peregrine.cms.log"
+    },
+    "com.peregrine.transform.operation.GreyscaleImageTransformation~it":{
+      "enabled":"true",
+      "transformationName":"vips:greyscale"
+    }
+  }
+}
