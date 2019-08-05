@@ -26,7 +26,7 @@ Use the correct version number instead of 8, if needed.
 
 3) Browse Sling in:
 
-        http://localhost:8080
+        http://localhost:7121
 
 ## How to run the Sling launchpad/builder module in webapp mode
 ---------------------------------------------------------------

@@ -76,7 +76,7 @@ public class BasicTestHelpers {
     }
 
     public static String createOSGiServiceConfiguration(SlingClient client, String factoryPid, Map<String, Object> properties) throws ClientException, IOException {
-//        curl -u admin:admin -X POST -d "apply=true" -d "propertylist=name" -d "name=mycfg" -d "factoryPid=com.acme.MyFactoryPid" http://localhost:8080/system/console/configMgr/%5BTemporary%20PID%20replaced%20by%20real%20PID%20upon%20save%5D
+//        curl -u admin:admin -X POST -d "apply=true" -d "propertylist=name" -d "name=mycfg" -d "factoryPid=com.acme.MyFactoryPid" http://localhost:7121/system/console/configMgr/%5BTemporary%20PID%20replaced%20by%20real%20PID%20upon%20save%5D
         String url = "/system/console/configMgr/%5BTemporary%20PID%20replaced%20by%20real%20PID%20upon%20save%5D";
 //        logger.info("Create Folder with URL: '{}' and Name: '{}'", url, name);
         FormEntityBuilder formEntityBuilder = FormEntityBuilder.create()

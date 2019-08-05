@@ -36,7 +36,7 @@ having these parameters:
 |deep|no|boolean|false|Replicate children as well|
 |deactivate|no|boolean|false|Deactivate / Remove replicants|
 
-Please use the [Swagger UI](http://localhost:8080/perapi/swaggereditor/), look for **repl.json**
+Please use the [Swagger UI](http://localhost:7121/perapi/swaggereditor/), look for **repl.json**
 and click on **try it out**, enter the parameter values on the click on **Execute**.
 
 The **name** of the distribution service is the name of a service that implements the
@@ -104,7 +104,7 @@ or
 The only things that needs to be adjusted is the URL that points to the **Publish**
 on the **Author**. Do this:
 
-1. Open [OSGi System Console Configuration](http://localhost:8080/system/console/configMgr)
+1. Open [OSGi System Console Configuration](http://localhost:7121/system/console/configMgr)
 1. Search for **Forward Agents Factory**
 1. Click to edit
 1. Look for Property: **Importer Endpoints**

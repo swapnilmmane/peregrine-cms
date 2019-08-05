@@ -63,4 +63,4 @@ ENTRYPOINT npx percli server start && tail -qF sling/logs/*
 HEALTHCHECK --interval=15s --retries=20 \
   CMD /app/healthcheck.sh
 
-EXPOSE 8080
+EXPOSE 7121

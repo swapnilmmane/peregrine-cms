@@ -20,7 +20,7 @@
         <node.version>v10.15.0</node.version>
 
         <sling.host>localhost</sling.host>
-        <sling.port>8080</sling.port>
+        <sling.port>7121</sling.port>
         <sling.user>admin</sling.user>
         <sling.password>admin</sling.password>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

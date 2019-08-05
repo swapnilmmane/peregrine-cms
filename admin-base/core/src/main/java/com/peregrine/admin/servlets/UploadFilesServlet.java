@@ -63,7 +63,7 @@ import static org.osgi.framework.Constants.SERVICE_VENDOR;
  *
  * curl -i -u admin:admin \
  *    -F"test3.jpg=@./testme.jpg;type=image/jpeg" \
- *    "http://localhost:8080/perapi/admin/uploadFiles.json/content/assets/test"
+ *    "http://localhost:7121/perapi/admin/uploadFiles.json/content/assets/test"
  *
  * 'test3.jpg' is the name of the asset under the given asset path in the URL,
  * './testme.jpg' is the relative or absolute path to the file to be uploaded

@@ -338,7 +338,7 @@ public class FormAuthenticationHandler extends DefaultAuthenticationFeedbackHand
 
                 @Override
                 public StringBuffer getRequestURL() {
-                    return new StringBuffer("http://localhost:8080/content/sites/example.html");
+                    return new StringBuffer("http://localhost:7121/content/sites/example.html");
                 }
 
                 @Override

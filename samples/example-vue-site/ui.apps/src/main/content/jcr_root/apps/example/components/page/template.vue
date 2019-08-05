@@ -59,6 +59,6 @@
 </script>
 <style>
     div.page-editor .from-template {
-        background-image: repeating-linear-gradient(135deg, #ffffff 0px, #ffffff 0px, #80808015 10px, #80808015 20px, #ffffff 20px);
+        background-image: repeating-linear-gradient(135deg, #ffffff 0px, #ffffff 0px, #71218015 10px, #71218015 20px, #ffffff 20px);
     }
 </style>

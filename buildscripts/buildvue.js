@@ -108,7 +108,7 @@ function updateIndexFiles() {
             console.log('upload')
             const slang = require('./slang.js')
             slang.setOptions({
-                port: 8080,
+                port: 7121,
                 host: 'localhost'
             })
 

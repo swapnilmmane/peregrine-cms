@@ -31,7 +31,7 @@ const cli = require('cli-interact')
 
 // default options
 let host = 'localhost'
-let port = '8080'
+let port = '7121'
 let username = 'admin'
 let password = 'admin'
 let index = 1

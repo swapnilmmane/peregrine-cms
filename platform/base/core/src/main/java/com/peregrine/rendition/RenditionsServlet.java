@@ -70,8 +70,8 @@ import static org.osgi.framework.Constants.SERVICE_VENDOR;
  * This servlet provides renditions of Peregrine Assets (per:Asset)
  * and creates them if they are not available yet
  *
- * Drag an image to the asset page: http://localhost:8080/content/admin/assets.html/path///content/assets
- * Create a thumbnail image with: curl -u admin:admin http://localhost:8080/content/assets/test.png.rendition.json/thumbnail.png
+ * Drag an image to the asset page: http://localhost:7121/content/admin/assets.html/path///content/assets
+ * Create a thumbnail image with: curl -u admin:admin http://localhost:7121/content/assets/test.png.rendition.json/thumbnail.png
  */
 public class RenditionsServlet extends AbstractBaseServlet {
 

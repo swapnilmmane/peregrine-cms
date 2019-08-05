@@ -119,7 +119,7 @@ Let's build from the root folder of the project and look at pcms
 percli compile -d
 ```
 
-Once the build is complete go to pcms at [http://localhost:8080]() and log in
+Once the build is complete go to pcms at [http://localhost:7121]() and log in
 with the default credentials (admin/admin)
 
 ![Alt text](img/admin-page.png?raw=true "Admin Page")

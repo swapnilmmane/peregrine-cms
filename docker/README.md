@@ -13,9 +13,9 @@ A prebuilt Peregrine Docker image is available on [Docker Hub](https://hub.docke
 
 2. Run the container.
 
-        $ docker run -it -p 8080:8080 peregrinecms/peregrine-cms:stable
+        $ docker run -it -p 7121:7121 peregrinecms/peregrine-cms:stable
 
-3. Open a browser and visit http://localhost:8080. Login with `admin` / ` admin`.
+3. Open a browser and visit http://localhost:7121. Login with `admin` / ` admin`.
 
 
 # Building the Image

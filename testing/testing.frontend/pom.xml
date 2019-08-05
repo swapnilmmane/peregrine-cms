@@ -450,7 +450,7 @@
                                     <environmentVariables>
                                         <NODE_PATH>./node_modules</NODE_PATH>
                                     </environmentVariables>
-                                    <arguments>run test -- --baseUrl http://localhost:8080</arguments>
+                                    <arguments>run test -- --baseUrl http://localhost:7121</arguments>
                                 </configuration>
                             </execution>
                         </executions>
